@@ -1,0 +1,23 @@
+.Wrapper {
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 250px;
+  height: 100vh;
+  /* padding: 0 10px 0 10px; */
+}
+
+.Photo {
+  margin-top: 5vh;
+  width: inherit;
+}
+
+.ContactsWrapper {
+  margin-top: 100px;
+  padding: 0 20px 0 20px;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+}
