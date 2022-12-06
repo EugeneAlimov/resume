@@ -348,3 +348,12 @@ template {
   display: none;
 }
 
+
+
+.person-photo {
+  width: 100%;
+}
+
+a {
+  color: #fff
+}
