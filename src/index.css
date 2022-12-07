@@ -354,8 +354,19 @@ template {
   width: 100%;
 }
 
-.Viber-social {
+.viber-social {
   height: 8vmin;
   width: 8vmin;
   fill: #774e98;
+  filter: drop-shadow(4px 3px 4px rgb(0 0 0 / 0.4));
+}
+
+.telegram-social {
+  fill: #37aee2;
+  filter: drop-shadow(4px 3px 4px rgb(0 0 0 / 0.4));
+}
+
+.linkedin-social {
+  fill: #006394;
+  filter: drop-shadow(4px 3px 4px rgb(0 0 0 / 0.4));
 }
