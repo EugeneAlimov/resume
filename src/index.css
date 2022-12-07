@@ -354,6 +354,8 @@ template {
   width: 100%;
 }
 
-a {
-  color: #fff
+.Viber-social {
+  height: 8vmin;
+  width: 8vmin;
+  fill: #774e98;
 }
