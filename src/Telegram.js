@@ -1,5 +1,5 @@
 import React from "react";
-// className={className}
+
 const Telegram = ({ className }) => {
   return (
     <svg width={120} height={120} viewBox="5 -5 15 35" className={className}>

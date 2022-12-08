@@ -9,7 +9,6 @@ const Telegram = ({ className }) => {
       width={90}
       height={90}
       viewBox="0 0 1000 1000"
-      enable-background="new 0 0 1000 1000"
     >
       <g>
         <g>

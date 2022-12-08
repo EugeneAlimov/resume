@@ -26,7 +26,7 @@ const Social = () => {
         <Link href="https://www.linkedin.com/in/yevhen-alimov-514568208/">
           <LinkedIn className="linkedin-social" />
         </Link>
-        <Link href="https://t.me/eugene1131">
+        <Link >
           <Telegram className="telegram-social" />
         </Link>
         <Link href="https://wa.me/380632154288">
