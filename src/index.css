@@ -8,7 +8,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
- html {
+html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -174,7 +174,8 @@ textarea {
  */
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -184,7 +185,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -348,25 +350,35 @@ template {
   display: none;
 }
 
-
-
 .person-photo {
   width: 100%;
 }
 
 .viber-social {
-  height: 8vmin;
-  width: 8vmin;
+  width: 65px;
+  height: 65px;
+  /* height: 8vmin; */
+  /* width: 8vmin; */
   fill: #774e98;
   filter: drop-shadow(4px 3px 4px rgb(0 0 0 / 0.4));
 }
 
 .telegram-social {
+  width: 65px;
+  height: 65px;
+
+  /* height: 8vmin;
+  width: 8vmin; */
   fill: #37aee2;
   filter: drop-shadow(4px 3px 4px rgb(0 0 0 / 0.4));
 }
 
 .linkedin-social {
+  width: 65px;
+  height: 65px;
+
+  /* height: 8vmin;
+  width: 8vmin; */
   fill: #006394;
   filter: drop-shadow(4px 3px 4px rgb(0 0 0 / 0.4));
 }

@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import "./App.css";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
@@ -8,8 +7,13 @@ import Personal from "./Components/Personal";
 import Paper from "@mui/material/Paper";
 import About from "./Components/About";
 import Social from "./Components/Social";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 function App() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <div className="App">
       <CssBaseline>
@@ -20,19 +24,11 @@ function App() {
           }}
         >
           <Grid container>
-            <Grid
-              display={"flex"}
-              // direction="column"
-              alignContent="flex-start"
-              justifyContent="center"
-              // alignItems="center"
-              item
-              xs={1}
-            >
-              <Social />
+            <Grid item xs={12} md={1} sx={{ margin: "0px" }}>
+              <Social matches={matches} />
             </Grid>
-            <Grid item xs={10}>
-              <Box sx={{ width: "100%", height: "80px" }}></Box>
+            <Grid item md={10}>
+              {matches ? <></> : <Box sx={{ width: "100%", height: "80px" }}></Box>}
               <Container disableGutters={true} maxWidth="xl">
                 <Grid boxShadow={20} sx={{ backgroundColor: "#e8edf0" }} container>
                   <Paper

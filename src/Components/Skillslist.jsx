@@ -9,23 +9,27 @@ const SkillsList = ({ date, post, company, location, icon }) => {
       <Typography fontWeight={400} variant="body1">
         {date}
       </Typography>
-      <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={6}>
+      <Stack
+        direction="row"
+        flexWrap="wrap"
+        justifyContent="space-between"
+        alignItems="center"
+        spacing={0}
+      >
         <Typography fontSize={22} fontWeight={500} variant="body1">
           {post}
         </Typography>
-        <Box>
-          <Stack width={250} direction="row" alignItems="center" spacing={3}>
-            {icon}
-            <Box>
-              <Typography fontWeight={400} variant="body1">
-                {company}
-              </Typography>
-              <Typography mt={1} fontWeight={400} variant="body1">
-                {location}
-              </Typography>
-            </Box>
-          </Stack>
-        </Box>
+        <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={3} mr={3}>
+          {icon}
+          <Box sx={{ width: "10vw" }}>
+            <Typography fontWeight={400} variant="body1">
+              {company}
+            </Typography>
+            <Typography mt={1} fontWeight={400} variant="body1">
+              {location}
+            </Typography>
+          </Box>
+        </Stack>
       </Stack>
     </Box>
   );
