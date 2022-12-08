@@ -22,7 +22,7 @@ const WorkSkills = () => {
         <Stack spacing={2} divider={<Divider orientation="horizontal" flexItem />}>
           <Box>
             <Typography fontWeight={400} variant="body1" paragraph={true} sx={{ textIndent: 40 }}>
-              For 10 years I has been developing software (
+              For 9 years I has been developing software (
               <Link color="inherit" href="https://en.wikipedia.org/wiki/IEC_61131-3">
                 IEC 61131-3 languages
               </Link>
