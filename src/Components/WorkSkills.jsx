@@ -19,7 +19,7 @@ const WorkSkills = () => {
             About
           </Typography>
         </Box>
-        <Stack spacing={2} divider={<Divider orientation="horizontal" flexItem />}>
+        <Stack mt={5} spacing={2} divider={<Divider orientation="horizontal" flexItem />}>
           <Box>
             <Typography fontWeight={400} variant="body1" paragraph={true} sx={{ textIndent: 40 }}>
               For 9 years I has been developing software (
@@ -33,50 +33,39 @@ const WorkSkills = () => {
           </Box>
           <Box>
             <Typography fontWeight={400} variant="body1" paragraph={true} sx={{ textIndent: 40 }}>
-              I decided to take up WEB development seriously after I was faced with the task of
-              creating an application for collecting, storing, visualizing and analyzing data on the
-              operation of equipment and technological processes.
+              At the current place of work, the task was to create an application for collecting,
+              storing, visualizing and analyzing data on the operation of equipment and
+              technological processes. I am implementing a web application so that specialists can
+              work in any convenient place from any workplace connected to the work network. It
+              should be convenient and easy to use, but at the same time contain all the necessary
+              graphics and calculations.
             </Typography>
             <Typography fontWeight={400} variant="body1" paragraph={true} sx={{ textIndent: 40 }}>
-              There was a choice of application type - a desktop on one computer (which does not
-              allow several specialists to work at the same time), which is used for analysis, or a
-              browser version so that specialists can work in any convenient place from any
-              workplace connected to the work network.
+              Used set of technologies:
             </Typography>
-            <Typography fontWeight={400} variant="body1" paragraph={true} sx={{ textIndent: 40 }}>
-              The choice turned out to be obvious and I took up the development of the browser
-              version, which I am currently implementing.
-            </Typography>
-            <Typography
-              fontWeight={400}
-              m={0}
-              variant="body1"
-              paragraph={true}
-              sx={{ textIndent: 40 }}
-            ></Typography>
             <TreeView
               aria-label="file system navigator"
               defaultCollapseIcon={<ExpandMoreIcon />}
               defaultExpandIcon={<ChevronRightIcon />}
               sx={{ height: "auto", flexGrow: 1, maxWidth: 400 }}
             >
-              <TreeItem nodeId="1" label="Back-end:">
-                <TreeItem nodeId="2" label="WEB server python (django(server)" />
-                <TreeItem nodeId="3" label="django-rest framework(API)" />
-                <TreeItem nodeId="4" label="djoser(authorization)" />
-                <TreeItem nodeId="5" label="simple-jwt(JWT tokens))" />
-                <TreeItem nodeId="6" label="SQLite DB" />
+              <TreeItem sx={{ mt: 1 }} nodeId="10" label="Front-end:">
+                <TreeItem sx={{ mt: 1 }} nodeId="11" label="React" />
+                <TreeItem sx={{ mt: 1 }} nodeId="12" label="React-rowter" />
+                <TreeItem sx={{ mt: 1 }} nodeId="13" label="Redux" />
+                <TreeItem sx={{ mt: 1 }} nodeId="14" label="MUI" />
+                <TreeItem sx={{ mt: 1 }} nodeId="15" label="Chart JS" />
               </TreeItem>
-              <TreeItem nodeId="7" label="OPC server:">
-                <TreeItem nodeId="8" label="node-red" />
-                <TreeItem nodeId="9" label="InfluxDB" />
+              <TreeItem sx={{ mt: 1 }} nodeId="1" label="Back-end:">
+                <TreeItem sx={{ mt: 1 }} nodeId="2" label="WEB server python (django(server))" />
+                <TreeItem sx={{ mt: 1 }} nodeId="3" label="django-rest framework(API)" />
+                <TreeItem sx={{ mt: 1 }} nodeId="4" label="djoser(authorization)" />
+                <TreeItem sx={{ mt: 1 }} nodeId="5" label="simple-jwt(JWT tokens))" />
+                <TreeItem sx={{ mt: 1 }} nodeId="6" label="SQLite DB" />
               </TreeItem>
-              <TreeItem nodeId="10" label="Front-end:">
-                <TreeItem nodeId="11" label="React" />
-                <TreeItem nodeId="2" label="React-rowter" />
-                <TreeItem nodeId="3" label="Redux" />
-                <TreeItem nodeId="14" label="MUI" />
-                <TreeItem nodeId="15" label="Chart JS" />
+              <TreeItem sx={{ mt: 1 }} nodeId="7" label="OPC server:">
+                <TreeItem sx={{ mt: 1 }} nodeId="8" label="node-red" />
+                <TreeItem sx={{ mt: 1 }} nodeId="9" label="InfluxDB" />
               </TreeItem>
             </TreeView>
           </Box>

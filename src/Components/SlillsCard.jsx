@@ -6,7 +6,7 @@ import Stack from "@mui/material/Stack";
 import Divider from "@mui/material/Divider";
 import SkillsList from "./Skillslist";
 
-const SkillsCard = ({ content, title, icon }) => {
+const SkillsCard = ({ matchesDownSm, content, title, icon }) => {
   return (
     <Paper square elevation={1} sx={{ backgroundColor: "#fafafa", width: "100%", marginTop: 5 }}>
       <Box ml={3} mr={3} paddingTop={5} paddingBottom={3}>
@@ -18,7 +18,7 @@ const SkillsCard = ({ content, title, icon }) => {
         <Stack spacing={2} divider={<Divider orientation="horizontal" flexItem />}>
           {content.map((el) => {
             const key = el.date;
-            return <SkillsList icon={icon} {...el} key={key} />;
+            return <SkillsList matchesDownSm={matchesDownSm} icon={icon} {...el} key={key} />;
           })}
         </Stack>
       </Box>

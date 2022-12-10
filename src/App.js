@@ -1,7 +1,6 @@
 import "./App.css";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Personal from "./Components/Personal";
 import Paper from "@mui/material/Paper";
@@ -12,7 +11,10 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 function App() {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.down("md"));
+  const matchesDownXl = useMediaQuery(theme.breakpoints.down("xl"));
+  const matchesDownLg = useMediaQuery(theme.breakpoints.down("lg"));
+  const matchesDownMd = useMediaQuery(theme.breakpoints.down("md"));
+  const matchesDownSm = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <div className="App">
@@ -23,26 +25,20 @@ function App() {
               "linear-gradient(90deg, rgba(202,236,222,1) 0%, rgba(202,236,222,0.8603816526610644) 76%, rgba(227,250,240,1) 100%)",
           }}
         >
-          <Grid container>
-            <Grid item xs={12} md={1} sx={{ margin: "0px" }}>
-              <Social matches={matches} />
+          {matchesDownXl ? <></> : <Social matchesDowMd={matchesDownMd} />}
+          <Box marginX={"auto"} width={matchesDownXl ? "95vw" : "85vw"}>
+            {matchesDownXl ? <></> : <Box sx={{ width: "100%", height: "80px" }}></Box>}
+            <Grid boxShadow={20} sx={{ backgroundColor: "#e8edf0" }} container>
+              <Paper
+                square
+                elevation={0}
+                sx={{ backgroundColor: "#99bf34", width: "100%", height: "7px" }}
+              ></Paper>
+              {matchesDownLg ? null : <Personal matchesDownXl={matchesDownXl} />}
+              <About matchesDownSm={matchesDownSm} />
             </Grid>
-            <Grid item md={10}>
-              {matches ? <></> : <Box sx={{ width: "100%", height: "80px" }}></Box>}
-              <Container disableGutters={true} maxWidth="xl">
-                <Grid boxShadow={20} sx={{ backgroundColor: "#e8edf0" }} container>
-                  <Paper
-                    square
-                    elevation={0}
-                    sx={{ backgroundColor: "#99bf34", width: "100%", height: "7px" }}
-                  ></Paper>
-                  <Personal />
-                  <About />
-                </Grid>
-              </Container>
-            </Grid>
-            <Box sx={{ width: "100%", height: "80px" }}></Box>
-          </Grid>
+          </Box>
+          {matchesDownXl ? <></> : <Box sx={{ width: "100%", height: "80px" }}></Box>}
         </Box>
       </CssBaseline>
     </div>
