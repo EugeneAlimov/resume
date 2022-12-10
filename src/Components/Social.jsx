@@ -61,7 +61,7 @@ const Social = ({ matchesDownXl, matchesDownMd }) => {
             }}
           />
         </Link>
-        <Link sx={{ transform: "rotate(-90deg)" }} href="https://wa.me/380632154288">
+        <Link sx={{ transform: "rotate(-90deg)" }} href="https://api.whatsapp.com/send?phone=380632154288">
           <Whatsap
             sx={{
               transition: "transform 0.45s",

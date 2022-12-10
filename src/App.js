@@ -8,6 +8,7 @@ import About from "./Components/About";
 import Social from "./Components/Social";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import DropdownMenu from "./Components/DropdownMenu";
 
 function App() {
   const theme = useTheme();
@@ -34,7 +35,7 @@ function App() {
                 elevation={0}
                 sx={{ backgroundColor: "#99bf34", width: "100%", height: "7px" }}
               ></Paper>
-              {matchesDownLg ? null : <Personal matchesDownXl={matchesDownXl} />}
+              {matchesDownLg ? <DropdownMenu /> : <Personal matchesDownXl={matchesDownXl} />}
               <About matchesDownSm={matchesDownSm} />
             </Grid>
           </Box>
