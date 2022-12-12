@@ -16,10 +16,6 @@ function App() {
   const matchesDownLg = useMediaQuery(theme.breakpoints.down("lg"));
   const matchesDownMd = useMediaQuery(theme.breakpoints.down("md"));
   const matchesDownSm = useMediaQuery(theme.breakpoints.down("sm"));
-  // console.log('matchesDownXl ', matchesDownXl);
-  // console.log('matchesDownLg ', matchesDownLg);
-  // console.log('matchesDownMd ', matchesDownMd);
-  // console.log('matchesDownSm ', matchesDownSm);
 
   return (
     <div className="App">
@@ -30,20 +26,42 @@ function App() {
               "linear-gradient(90deg, rgba(202,236,222,1) 0%, rgba(202,236,222,0.8603816526610644) 76%, rgba(227,250,240,1) 100%)",
           }}
         >
-          {matchesDownXl ? <></> : <Social matchesDowMd={matchesDownMd} />}
-          <Box marginX={"auto"} width={matchesDownXl ? "95vw" : "85vw"}>
-            {matchesDownXl ? <></> : <Box sx={{ width: "100%", height: "80px" }}></Box>}
-            <Grid boxShadow={20} sx={{ backgroundColor: "#e8edf0" }} container>
+          {matchesDownXl ? null :
+            <>
+              <Social matchesDowMd={matchesDownMd} />
+              <Box className="forPrintNoDisplay" sx={{ width: "100%", height: "80px" }}></Box>
+            </>
+          }
+          <Box
+            sx={{
+              "@media print": {
+                width: "100%",
+                boxShadow:
+                  "0px 0px 0px 0px rgba(0,0,0,0),0px 0px 0px 0px rgba(0,0,0,0),0px 0px 0px 0px rgba(0,0,0,0)",
+              },
+              boxShadow:
+                "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+            }}
+            marginX={"auto"}
+            width={matchesDownXl ? "95vw" : "85vw"}
+          >
+            <Grid sx={{ backgroundColor: "#e8edf0" }} container>
               <Paper
                 square
                 elevation={0}
                 sx={{ backgroundColor: "#99bf34", width: "100%", height: "7px" }}
               ></Paper>
               {matchesDownLg ? <DropdownMenu /> : <Personal matchesDownXl={matchesDownXl} />}
-              <About matchesDownSm={matchesDownSm} matchesDownMd={matchesDownMd} matchesDownLg={matchesDownLg} />
+              <About
+                matchesDownSm={matchesDownSm}
+                matchesDownMd={matchesDownMd}
+                matchesDownLg={matchesDownLg}
+              />
             </Grid>
           </Box>
-          {matchesDownXl ? <></> : <Box sx={{ width: "100%", height: "80px" }}></Box>}
+          {matchesDownXl ? null : (
+            <Box className="forPrintNoDisplay" sx={{ width: "100%", height: "80px" }}></Box>
+          )}
         </Box>
       </CssBaseline>
     </div>

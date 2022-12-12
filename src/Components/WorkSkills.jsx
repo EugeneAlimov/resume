@@ -1,5 +1,4 @@
 import React from "react";
-import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
@@ -12,16 +11,38 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 const WorkSkills = () => {
   return (
-    <Paper square elevation={1} sx={{ backgroundColor: "#fafafa", width: "100%", marginTop: 5 }}>
+    <Box
+      sx={{
+        "@media print": {
+          margin: 0,
+          padding: 0,
+          boxShadow:
+            "0px 0px 0px 0px rgba(0,0,0,0),0px 0px 0px 0px rgba(0,0,0,0),0px 0px 0px 0px rgba(0,0,0,0)",
+        },
+        backgroundColor: "#fafafa",
+        width: "100%",
+        marginTop: 5,
+        boxShadow:
+          "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
+      }}
+    >
       <Box ml={3} mr={3} paddingTop={5} paddingBottom={3}>
-        <Box>
-          <Typography color={"#99bf34"} fontWeight={700} variant="h4" component="h3">
-            About
-          </Typography>
-        </Box>
-        <Stack mt={5} spacing={2} divider={<Divider orientation="horizontal" flexItem />}>
-          <Box>
-            <Typography fontWeight={400} variant="body1" paragraph={true} sx={{ textIndent: 40 }}>
+        <Typography color={"#99bf34"} fontWeight={700} variant="h4" component="h3">
+          About
+        </Typography>
+        <Stack
+          sx={{ "@media print": { margin: 0, padding: 0, spacing: 1 } }}
+          mt={5}
+          spacing={2}
+          divider={<Divider className="forPrintNoDisplay" orientation="horizontal" flexItem />}
+        >
+          <Box sx={{ "@media print": { margin: 0, padding: 0 } }}>
+            <Typography
+              sx={{ "@media print": { margin: 0, padding: 0 }, textIndent: 40 }}
+              fontWeight={400}
+              variant="body1"
+              paragraph={true}
+            >
               For 9 years I has been developing software (
               <Link color="inherit" href="https://en.wikipedia.org/wiki/IEC_61131-3">
                 IEC 61131-3 languages
@@ -32,7 +53,12 @@ const WorkSkills = () => {
             </Typography>
           </Box>
           <Box>
-            <Typography fontWeight={400} variant="body1" paragraph={true} sx={{ textIndent: 40 }}>
+            <Typography
+              sx={{ "@media print": { margin: 0, padding: 0 }, textIndent: 40 }}
+              fontWeight={400}
+              variant="body1"
+              paragraph={true}
+            >
               At the current place of work, the task was to create an application for collecting,
               storing, visualizing and analyzing data on the operation of equipment and
               technological processes. I am implementing a web application so that specialists can
@@ -71,7 +97,7 @@ const WorkSkills = () => {
           </Box>
         </Stack>
       </Box>
-    </Paper>
+    </Box>
   );
 };
 

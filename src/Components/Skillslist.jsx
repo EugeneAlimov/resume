@@ -2,7 +2,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
-import { Link } from "@mui/material";
+import Link from "@mui/material/Link";
 
 const SkillsList = ({ matchesDownSm, date, post, company, location, locationLink, icon }) => {
   return (

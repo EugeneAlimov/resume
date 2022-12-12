@@ -10,7 +10,7 @@ import Whatsap from "../SocialIcons/Whatsap";
 
 const Social = ({ matchesDownXl, matchesDownMd }) => {
   return (
-    <Box position={matchesDownXl ? "relative" : "fixed"}>
+    <Box className="forPrintNoDisplay" position={matchesDownXl ? "relative" : "fixed"}>
       <Stack
         marginX={"auto"}
         height={matchesDownMd ? "10vh" : "100vh"}

@@ -353,3 +353,9 @@ template {
 .person-photo {
   width: 100%;
 }
+
+@media print {
+  .forPrintNoDisplay {
+    display: none;
+  }
+}

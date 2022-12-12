@@ -2,13 +2,14 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
 import Typography from "@mui/material/Typography";
 import LocationOnTwoToneIcon from "@mui/icons-material/LocationOnTwoTone";
 import CastForEducationTwoToneIcon from "@mui/icons-material/CastForEducationTwoTone";
 import SkillsCard from "./SlillsCard";
 import WorkSkills from "./WorkSkills";
 import NamePost from "./NamePost";
-import { List, ListItem } from "@mui/material";
 
 const experienceArr = [
   {
@@ -52,22 +53,47 @@ const educationArr = [
 
 const About = ({ matchesDownSm, matchesDownMd, matchesDownLg }) => {
   return (
-    <Grid item md={12} lg={10} paddingLeft={3} paddingRight={3} paddingBottom={5}>
+    <Grid
+      sx={{
+        "@media print": {
+          padding: 0,
+        },
+      }}
+      item
+      md={12}
+      lg={10}
+      paddingX={3}
+      paddingBottom={5}
+    >
       <NamePost matchesDownMd={matchesDownMd} matchesDownLg={matchesDownLg} />
       <WorkSkills />
       <SkillsCard
         matchesDownSm={matchesDownSm}
         content={experienceArr}
         title={"Work experience"}
-        icon={<LocationOnTwoToneIcon fontSize="large" />}
+        icon={<LocationOnTwoToneIcon className="forPrintNoDisplay" fontSize="large" />}
       />
       <SkillsCard
         matchesDownSm={matchesDownSm}
         content={educationArr}
         title={"Education"}
-        icon={<CastForEducationTwoToneIcon fontSize="large" />}
+        icon={<CastForEducationTwoToneIcon className="forPrintNoDisplay" fontSize="large" />}
       />
-      <Paper square elevation={1} sx={{ backgroundColor: "#fafafa", width: "100%", marginTop: 5 }}>
+      <Box
+        sx={{
+          "@media print": {
+            margin: 0,
+            padding: 0,
+            boxShadow:
+              "0px 0px 0px 0px rgba(0,0,0,0),0px 0px 0px 0px rgba(0,0,0,0),0px 0px 0px 0px rgba(0,0,0,0)",
+          },
+          backgroundColor: "#fafafa",
+          width: "100%",
+          marginTop: 5,
+          boxShadow:
+            "0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12)",
+        }}
+      >
         <Box ml={3} mr={3} paddingTop={5} paddingBottom={3}>
           <Box>
             <Typography color={"#99bf34"} fontWeight={700} variant="h4" component="h3">
@@ -87,7 +113,7 @@ const About = ({ matchesDownSm, matchesDownMd, matchesDownLg }) => {
             </List>
           </Box>
         </Box>
-      </Paper>
+      </Box>
     </Grid>
   );
 };

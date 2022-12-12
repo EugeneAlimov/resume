@@ -12,7 +12,7 @@ import ListItem from "@mui/material/ListItem"
 
 const Personal = ({ matchesDownXl, matchesDownMd }) => {
   return (
-    <Grid item xs={2}>
+    <Grid className="forPrintNoDisplay" item xs={2}>
       <Paper
         square
         elevation={0}
