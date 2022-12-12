@@ -7,13 +7,6 @@ import Divider from "@mui/material/Divider";
 import { styled } from "@mui/material/styles";
 import SkillsList from "./Skillslist";
 
-const ContentPaper = styled(Paper)(() => ({
-  "@media print": {
-    marginTop: 0,
-    elevation: 0,
-  },
-}));
-
 const ContentBox = styled(Box)(() => ({
   "@media print": {
     marginTop: 0,
