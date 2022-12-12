@@ -1,5 +1,5 @@
 import React from "react";
-
+import Social from "./Social";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
@@ -7,12 +7,12 @@ import photo from "../media/photo.jpg";
 import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Link from "@mui/material/Link";
-import { List, ListItem } from "@mui/material";
-import Social from "./Social";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem"
 
 const Personal = ({ matchesDownXl, matchesDownMd }) => {
   return (
-    <Grid item xs={matchesDownMd && !matchesDownXl ? 3 : 2}>
+    <Grid item xs={2}>
       <Paper
         square
         elevation={0}
@@ -57,21 +57,6 @@ const Personal = ({ matchesDownXl, matchesDownMd }) => {
                     </Link>
                   </Typography>
                 </Box>
-              </ListItem>
-            </List>
-            <Typography sx={{ color: "#fff" }} variant="h4" component="h3">
-              Languages:
-            </Typography>
-            <List>
-              <ListItem>
-                <Typography sx={{ color: "#fff" }} variant="body2" gutterBottom>
-                  English - pre intermediate
-                </Typography>
-              </ListItem>
-              <ListItem>
-                <Typography sx={{ color: "#fff" }} variant="body2" gutterBottom>
-                  Ukrainian - native
-                </Typography>
               </ListItem>
             </List>
           </Stack>

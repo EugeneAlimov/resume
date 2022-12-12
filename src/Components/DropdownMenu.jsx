@@ -8,7 +8,15 @@ import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
+import { styled } from "@mui/material/styles";
 
+const DropDownButton = styled(Button)(() => ({
+  backgroundColor: "black",
+  width: "100%",
+  height: 60,
+  borderRadius: 0,
+  "&:hover": { backgroundColor: "#444" },
+}));
 const DropdownMenu = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -21,18 +29,17 @@ const DropdownMenu = () => {
   };
 
   return (
-    <div>
-      {open ? null : (
-        <Button
-          id="basic-button"
-          aria-controls={open ? "basic-menu" : undefined}
-          aria-haspopup="true"
-          aria-expanded={open ? "true" : undefined}
-          onClick={handleClick}
-        >
-          Dashboard
-        </Button>
-      )}
+    <Box width={"100%"}>
+      <DropDownButton
+        variant="contained"
+        id="basic-button"
+        aria-controls={open ? "basic-menu" : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? "true" : undefined}
+        onClick={handleClick}
+      >
+        My contacts
+      </DropDownButton>
       <Menu
         id="basic-menu"
         anchorEl={anchorEl}
@@ -88,23 +95,6 @@ const DropdownMenu = () => {
           </Box>
           <Box>
             <Typography sx={{ color: "#00" }} variant="h4" component="h3">
-              Languages:
-            </Typography>
-            <List>
-              <ListItem>
-                <Typography sx={{ color: "#00" }} variant="body2" gutterBottom>
-                  English - pre intermediate
-                </Typography>
-              </ListItem>
-              <ListItem>
-                <Typography sx={{ color: "#00" }} variant="body2" gutterBottom>
-                  Ukrainian - native
-                </Typography>
-              </ListItem>
-            </List>
-          </Box>
-          <Box>
-            <Typography sx={{ color: "#00" }} variant="h4" component="h3">
               Social:
             </Typography>
             <List>
@@ -141,7 +131,7 @@ const DropdownMenu = () => {
           </Box>
         </Stack>
       </Menu>
-    </div>
+    </Box>
   );
 };
 export default DropdownMenu;

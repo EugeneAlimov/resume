@@ -1,10 +1,14 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 import LocationOnTwoToneIcon from "@mui/icons-material/LocationOnTwoTone";
 import CastForEducationTwoToneIcon from "@mui/icons-material/CastForEducationTwoTone";
 import SkillsCard from "./SlillsCard";
 import WorkSkills from "./WorkSkills";
 import NamePost from "./NamePost";
+import { List, ListItem } from "@mui/material";
 
 const experienceArr = [
   {
@@ -46,10 +50,10 @@ const educationArr = [
   },
 ];
 
-const About = ({ matchesDownSm }) => {
+const About = ({ matchesDownSm, matchesDownMd, matchesDownLg }) => {
   return (
     <Grid item md={12} lg={10} paddingLeft={3} paddingRight={3} paddingBottom={5}>
-      <NamePost />
+      <NamePost matchesDownMd={matchesDownMd} matchesDownLg={matchesDownLg} />
       <WorkSkills />
       <SkillsCard
         matchesDownSm={matchesDownSm}
@@ -63,6 +67,27 @@ const About = ({ matchesDownSm }) => {
         title={"Education"}
         icon={<CastForEducationTwoToneIcon fontSize="large" />}
       />
+      <Paper square elevation={1} sx={{ backgroundColor: "#fafafa", width: "100%", marginTop: 5 }}>
+        <Box ml={3} mr={3} paddingTop={5} paddingBottom={3}>
+          <Box>
+            <Typography color={"#99bf34"} fontWeight={700} variant="h4" component="h3">
+              Languages
+            </Typography>
+            <List>
+              <ListItem>
+                <Typography variant="body1" fontSize={22} fontWeight={500}>
+                  English - pre intermediate
+                </Typography>
+              </ListItem>
+              <ListItem>
+                <Typography variant="body1" fontSize={22} fontWeight={500}>
+                  Ukrainian - native
+                </Typography>
+              </ListItem>
+            </List>
+          </Box>
+        </Box>
+      </Paper>
     </Grid>
   );
 };

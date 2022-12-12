@@ -16,6 +16,10 @@ function App() {
   const matchesDownLg = useMediaQuery(theme.breakpoints.down("lg"));
   const matchesDownMd = useMediaQuery(theme.breakpoints.down("md"));
   const matchesDownSm = useMediaQuery(theme.breakpoints.down("sm"));
+  // console.log('matchesDownXl ', matchesDownXl);
+  // console.log('matchesDownLg ', matchesDownLg);
+  // console.log('matchesDownMd ', matchesDownMd);
+  // console.log('matchesDownSm ', matchesDownSm);
 
   return (
     <div className="App">
@@ -36,7 +40,7 @@ function App() {
                 sx={{ backgroundColor: "#99bf34", width: "100%", height: "7px" }}
               ></Paper>
               {matchesDownLg ? <DropdownMenu /> : <Personal matchesDownXl={matchesDownXl} />}
-              <About matchesDownSm={matchesDownSm} />
+              <About matchesDownSm={matchesDownSm} matchesDownMd={matchesDownMd} matchesDownLg={matchesDownLg} />
             </Grid>
           </Box>
           {matchesDownXl ? <></> : <Box sx={{ width: "100%", height: "80px" }}></Box>}
