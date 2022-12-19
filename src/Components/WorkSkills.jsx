@@ -77,7 +77,7 @@ const WorkSkills = () => {
             >
               <TreeItem sx={{ mt: 1 }} nodeId="10" label="Front-end:">
                 <TreeItem sx={{ mt: 1 }} nodeId="11" label="React" />
-                <TreeItem sx={{ mt: 1 }} nodeId="12" label="React-rowter" />
+                <TreeItem sx={{ mt: 1 }} nodeId="12" label="React-router" />
                 <TreeItem sx={{ mt: 1 }} nodeId="13" label="Redux" />
                 <TreeItem sx={{ mt: 1 }} nodeId="14" label="MUI" />
                 <TreeItem sx={{ mt: 1 }} nodeId="15" label="Chart JS" />
