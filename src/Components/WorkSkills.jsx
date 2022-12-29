@@ -43,13 +43,13 @@ const WorkSkills = () => {
               variant="body1"
               paragraph={true}
             >
-              For 9 years I has been developing software (
+              I have been developing software (
               <Link color="inherit" href="https://en.wikipedia.org/wiki/IEC_61131-3">
                 IEC 61131-3 languages
               </Link>
               ) for PLCs Siemens, Allen-Bradley, Schneider at metallurgical enterprises in Ukraine
-              and other countries. The main thing I am proud of is friendship with colleagues and
-              respect from the management.
+              and other countries for 9 years. The main thing I proud of is the friendship with colleagues and
+              the respect from the management.
             </Typography>
           </Box>
           <Box>
